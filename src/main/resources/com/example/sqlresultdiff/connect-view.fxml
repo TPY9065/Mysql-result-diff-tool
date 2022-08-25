@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml" spacing="20"
+      fx:controller="com.example.sqlresultdiff.controller.ConnectionController">
+    <padding>
+        <Insets bottom="20.0" left="100.0" right="100.0" top="20.0"/>
+    </padding>
+    <GridPane vgap="10" hgap="20">
+        <Label GridPane.rowIndex="0" GridPane.columnIndex="0"
+               text="Hostname: " GridPane.halignment="RIGHT"
+               style="-fx-font-family: Helvetica; -fx-font-size: 16"/>
+        <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" fx:id="urlField"/>
+        
+        <Label GridPane.rowIndex="0" GridPane.columnIndex="2"
+               text="Port: " GridPane.halignment="RIGHT"
+               style="-fx-font-family: Helvetica; -fx-font-size: 16" />
+        <TextField GridPane.rowIndex="0" GridPane.columnIndex="3" fx:id="portField"/>
+        
+        <Label GridPane.rowIndex="1" GridPane.columnIndex="0"
+               text="Username: " GridPane.halignment="RIGHT"
+               style="-fx-font-family: Helvetica; -fx-font-size: 16"/>
+        <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="3" fx:id="usernameField"/>
+
+        <Label GridPane.rowIndex="2" GridPane.columnIndex="0"
+               text="Password: " GridPane.halignment="RIGHT"
+               style="-fx-font-family: Helvetica; -fx-font-size: 16"/>
+        <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.columnSpan="3" fx:id="passwordField"/>
+    
+        <Label GridPane.rowIndex="3" GridPane.columnIndex="0"
+               text="Schema: " GridPane.halignment="RIGHT"
+               style="-fx-font-family: Helvetica; -fx-font-size: 16"/>
+        <TextField GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.columnSpan="3" fx:id="schemaField"/>
+    </GridPane>
+    <Button text="Connect" onAction="#onConnectButtonClick" style="-fx-font-family: Helvetica; -fx-font-size: 14;"/>
+</VBox>

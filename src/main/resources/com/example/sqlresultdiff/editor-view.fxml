@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Label?>
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.sqlresultdiff.controller.EditorController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+    
+    <ToolBar style="-fx-background-color: darkgrey;" fx:id="toolBar" />
+    
+    <SplitPane VBox.vgrow="ALWAYS" orientation="VERTICAL">
+        <SplitPane>
+            <TextArea fx:id="leftTextArea" onKeyPressed="#onKeyPressedOnLeftEditor" />
+            <TextArea fx:id="rightTextArea" onKeyPressed="#onKeyPressedOnRightEditor" />
+        </SplitPane>
+        <SplitPane>
+            <TableView fx:id="leftResultTable" />
+            <TableView fx:id="rightResultTable" />
+        </SplitPane>
+        <Label fx:id="differencesHintText" />
+    </SplitPane>
+</VBox>
